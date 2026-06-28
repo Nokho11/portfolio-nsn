@@ -104,6 +104,18 @@
     font-weight: 400;
   }
   .nav-links a:hover { color: var(--gold); }
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width .3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
 
   /* ─── HERO ─── */
   #home {
@@ -175,7 +187,7 @@
     transition: all .3s;
     display:inline-block;
   }
-  .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,.55); }
   .btn-outline {
     background: transparent;
     color: var(--text);
@@ -190,7 +202,7 @@
     transition: all .3s;
     display:inline-block;
   }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform:translateY(-1px); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform:translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,.35); }
 
   .hero-stats {
     margin-top: 72px;
@@ -306,7 +318,7 @@
     background: var(--gold); transform:scaleY(0); transform-origin:bottom;
     transition: transform .35s;
   }
-  .exp-item:hover { border-color:var(--border); background:var(--bg3); }
+  .exp-item:hover { border-color:var(--gold); background:var(--bg3); box-shadow: 0 6px 28px rgba(201,168,76,.35); background: #22223a !important; }
   .exp-item:hover::before { transform:scaleY(1); }
 
   .exp-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; }
@@ -332,7 +344,7 @@
     padding:28px 28px;
     transition:all .3s;
   }
-  .skill-card:hover { border-color:var(--border); transform:translateY(-3px); }
+  .skill-card:hover { border-color:var(--gold); transform:translateY(-5px); box-shadow: 0 12px 36px rgba(201,168,76,.4); background: #22223a; }
   .skill-card-title {
     font-size:11px; letter-spacing:3px; text-transform:uppercase;
     color:var(--gold); margin-bottom:18px; font-weight:500;
@@ -356,7 +368,7 @@
     background:linear-gradient(90deg, var(--gold), transparent);
     transform:scaleX(0); transform-origin:left; transition:transform .4s;
   }
-  .proj-card:hover { border-color:var(--border); transform:translateY(-4px); }
+  .proj-card:hover { border-color:var(--gold); transform:translateY(-6px); box-shadow: 0 16px 44px rgba(201,168,76,.45); background: #22223a; }
   .proj-card:hover::after { transform:scaleX(1); }
   .proj-num { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:300; color:rgba(201,168,76,.12); position:absolute;top:16px;right:24px; line-height:1; }
   .proj-tag { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
@@ -384,7 +396,7 @@
     padding:22px 26px; display:flex; align-items:center; gap:16px;
     transition:all .3s;
   }
-  .cert-card:hover { border-color:var(--border); }
+  .cert-card:hover { border-color:var(--gold); transform:translateY(-3px); box-shadow: 0 8px 28px rgba(201,168,76,.35); background: #22223a; }
   .cert-icon { width:32px;height:32px;border-radius:50%;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0; color:var(--gold);font-size:14px; }
   .cert-body {}
   .cert-name { font-size:13px; font-weight:500; margin-bottom:2px; }
@@ -411,7 +423,7 @@
     border:1px solid var(--border-soft);
     padding:12px 22px; transition:all .3s;
   }
-  .contact-link:hover { border-color:var(--border); color:var(--gold); }
+  .contact-link:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,.4); background: #22223a; }
   .contact-link svg { width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2; }
 
   .footer-bottom {
@@ -733,28 +745,24 @@
   </div>
   <div class="edu-list">
     <div class="edu-item reveal">
-      <div class="edu-year">2024 – <span data-fr="Présent" data-en="Present">Présent</span></div>
       <div>
         <div class="edu-degree" data-fr="Master 1 Big Data Analytics" data-en="Master's in Big Data Analytics">Master 1 Big Data Analytics</div>
         <div class="edu-school" data-fr="Université Cheikh Hamidou Kane · Sénégal" data-en="Cheikh Hamidou Kane University · Senegal">Université Cheikh Hamidou Kane · Sénégal</div>
       </div>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-year">2018 – 2019</div>
       <div>
         <div class="edu-degree" data-fr="Licence Génie Informatique" data-en="Bachelor's in Computer Engineering">Licence Génie Informatique</div>
         <div class="edu-school">UNIVERSAT · Dakar</div>
       </div>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-year">2014 – 2016</div>
       <div>
         <div class="edu-degree" data-fr="DUT Mathématiques, Physique & Informatique" data-en="DUT in Mathematics, Physics & Computer Science">DUT Mathématiques, Physique & Informatique</div>
         <div class="edu-school">Université Cheikh Anta Diop (UCAD) · Dakar</div>
       </div>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-year">2013</div>
       <div>
         <div class="edu-degree" data-fr="Baccalauréat Scientifique S2" data-en="Scientific Baccalaureate (S2)">Baccalauréat Scientifique S2</div>
         <div class="edu-school" data-fr="Lycée Demba Diop · Mbour" data-en="Demba Diop High School · Mbour">Lycée Demba Diop · Mbour</div>
@@ -893,7 +901,7 @@
     lang = lang === 'en' ? 'fr' : 'en';
     document.getElementById('lang-btn').innerHTML = lang === 'en' ? '🇫🇷 Français' : '🇬🇧 English';
     document.documentElement.lang = lang;
-    document.querySelectorAll('[data-fr]').forEach(el => {
+    document.querySelectorAll('[data-fr], [data-en]').forEach(el => {
       const val = el.getAttribute('data-' + lang);
       if (val) el.innerHTML = val;
     });
