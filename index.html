@@ -380,9 +380,10 @@
   #education { background:var(--bg2); }
   .edu-list { display:flex; flex-direction:column; gap:0; }
   .edu-item {
-    display:grid; grid-template-columns:200px 1fr;
-    gap:40px; padding:36px 0;
+    display:flex; flex-direction:column;
+    gap:8px; padding:32px 0;
     border-bottom:1px solid var(--border-soft);
+    max-width:700px;
   }
   .edu-year { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--gold); letter-spacing:1px; padding-top:4px; }
   .edu-degree { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; margin-bottom:4px; }
@@ -745,63 +746,49 @@
   <div class="edu-list">
 
     <div class="edu-item reveal">
-      <div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;" data-fr="2024 – Présent" data-en="2024 – Present">2024 – Présent</div>
-        <div class="edu-degree" data-fr="Master 1 Big Data Analytics" data-en="Master's in Big Data Analytics">Master 1 Big Data Analytics</div>
-        <div class="edu-school" data-fr="Université Numérique Cheikh Hamidou Kane (UN-CHK) · Sénégal" data-en="Université Numérique Cheikh Hamidou Kane (UN-CHK) · Senegal">Université Numérique Cheikh Hamidou Kane (UN-CHK) · Sénégal</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
-          <span class="skill-tag">Big Data</span>
-          <span class="skill-tag">Spark</span>
-          <span class="skill-tag">Machine Learning</span>
-          <span class="skill-tag">NoSQL</span>
-          <span class="skill-tag">ETL</span>
-          <span class="skill-tag" style="border-color:rgba(76,175,122,0.4);color:#4caf7c;" data-fr="En cours" data-en="Ongoing">En cours</span>
-        </div>
+      <div class="edu-degree" data-fr="Master 1 Big Data Analytics" data-en="Master's in Big Data Analytics">Master 1 Big Data Analytics</div>
+      <div class="edu-school" data-fr="Université Numérique Cheikh Hamidou Kane (UN-CHK) · Sénégal" data-en="Université Numérique Cheikh Hamidou Kane (UN-CHK) · Senegal">Université Numérique Cheikh Hamidou Kane (UN-CHK) · Sénégal</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+        <span class="skill-tag">Big Data</span>
+        <span class="skill-tag">Spark</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">NoSQL</span>
+        <span class="skill-tag">ETL</span>
+        <span class="skill-tag" style="border-color:rgba(76,175,122,0.4);color:#4caf7c;" data-fr="En cours" data-en="Ongoing">En cours</span>
       </div>
     </div>
 
     <div class="edu-item reveal">
-      <div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">2018 – 2019</div>
-        <div class="edu-degree" data-fr="Licence en Génie Informatique" data-en="Bachelor's in Computer Engineering">Licence en Génie Informatique</div>
-        <div class="edu-school">UNIVERSAT · Dakar</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
-          <span class="skill-tag">Algorithmique</span>
-          <span class="skill-tag">Bases de données</span>
-          <span class="skill-tag">Réseaux</span>
-          <span class="skill-tag">Développement logiciel</span>
-        </div>
+      <div class="edu-degree" data-fr="Licence en Génie Informatique" data-en="Bachelor's in Computer Engineering">Licence en Génie Informatique</div>
+      <div class="edu-school">UNIVERSAT · Dakar</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+        <span class="skill-tag">Algorithmique</span>
+        <span class="skill-tag">Bases de données</span>
+        <span class="skill-tag">Réseaux</span>
+        <span class="skill-tag">Développement logiciel</span>
       </div>
     </div>
 
     <div class="edu-item reveal">
-      <div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">2014 – 2016</div>
-        <div class="edu-degree" data-fr="DUT Mathématiques, Physique & Informatique" data-en="DUT in Mathematics, Physics & Computer Science">DUT Mathématiques, Physique & Informatique</div>
-        <div class="edu-school">Université Cheikh Anta Diop (UCAD) · Dakar</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
-          <span class="skill-tag">Mathématiques</span>
-          <span class="skill-tag">Physique</span>
-          <span class="skill-tag">Informatique</span>
-          <span class="skill-tag">Statistiques</span>
-        </div>
+      <div class="edu-degree" data-fr="DUT Mathématiques, Physique & Informatique" data-en="DUT in Mathematics, Physics & Computer Science">DUT Mathématiques, Physique & Informatique</div>
+      <div class="edu-school">Université Cheikh Anta Diop (UCAD) · Dakar</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+        <span class="skill-tag">Mathématiques</span>
+        <span class="skill-tag">Physique</span>
+        <span class="skill-tag">Informatique</span>
+        <span class="skill-tag">Statistiques</span>
       </div>
     </div>
 
     <div class="edu-item reveal">
-      <div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">2013</div>
-        <div class="edu-degree" data-fr="Baccalauréat Scientifique S2" data-en="Scientific Baccalaureate (S2)">Baccalauréat Scientifique S2</div>
-        <div class="edu-school" data-fr="Lycée Demba Diop · Mbour" data-en="Demba Diop High School · Mbour">Lycée Demba Diop · Mbour</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
-          <span class="skill-tag">Sciences</span>
-          <span class="skill-tag">Mathématiques</span>
-        </div>
+      <div class="edu-degree" data-fr="Baccalauréat Scientifique S2" data-en="Scientific Baccalaureate (S2)">Baccalauréat Scientifique S2</div>
+      <div class="edu-school" data-fr="Lycée Demba Diop · Mbour" data-en="Demba Diop High School · Mbour">Lycée Demba Diop · Mbour</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+        <span class="skill-tag">Sciences</span>
+        <span class="skill-tag">Mathématiques</span>
       </div>
     </div>
 
-  </div>
-</section>
   </div>
 </section>
 
